@@ -45,7 +45,7 @@ sub strip {
 In Perl:
 
  use Data::Unixish::List qw(dux);
- $stripped = dux('strip', "\e[1mblah"); # "blah"
+ $stripped = dux('ansi::strip', "\e[1mblah"); # "blah"
 
 In command line:
 

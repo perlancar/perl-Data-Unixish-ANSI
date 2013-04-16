@@ -61,7 +61,7 @@ sub color {
 In Perl:
 
  use Data::Unixish::List qw(dux);
- $colorized = dux(['color' => {color=>"red"}], "red"); # "\e[31mred\e[0m"
+ $colorized = dux(['ansi::color' => {color=>"red"}], "red"); # "\e[31mred\e[0m"
 
 In command line:
 
