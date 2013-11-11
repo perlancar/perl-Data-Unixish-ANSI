@@ -2,9 +2,9 @@ Revision history for Data-Unixish-ansi
 
 0.02    2013-04-20 (SHARYANTO)
 
-        Add func: ansi::highlight.
+        - Add func: ansi::highlight.
 
 
 0.01    2013-04-12 (SHARYANTO)
 
-        First version.
+        - First version.
