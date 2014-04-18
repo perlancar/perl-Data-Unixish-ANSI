@@ -19,7 +19,7 @@ $SPEC{strip} = {
     args => {
         %common_args,
     },
-    tags => [qw/text ansi/],
+    tags => [qw/text ansi itemfunc/],
     "x.dux.default_format" => "text-simple",
 };
 sub strip {
@@ -27,14 +27,19 @@ sub strip {
     my ($in, $out) = ($args{in}, $args{out});
 
     while (my ($index, $item) = each @$in) {
-        {
-            last if !defined($item) || ref($item);
-            $item = ta_strip($item);
-        }
-        push @$out, $item;
+        push @$out, _strip_item($item);
     }
 
     [200, "OK"];
+}
+
+sub _strip_item {
+    my $item = shift;
+    {
+        last if !defined($item) || ref($item);
+        $item = ta_strip($item);
+    }
+    return $item;
 }
 
 1;

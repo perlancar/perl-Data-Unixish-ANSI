@@ -32,25 +32,37 @@ _
             req => 1,
         },
     },
-    tags => [qw/text ansi/],
+    tags => [qw/text ansi itemfunc/],
     "x.dux.default_format" => "text-simple",
 };
 sub color {
     my %args = @_;
     my ($in, $out) = ($args{in}, $args{out});
 
-    my $color = $args{color};
-    $color = Term::ANSIColor::color($color) unless $color =~ /\A\e/;
-
     while (my ($index, $item) = each @$in) {
-        {
-            last if !defined($item) || ref($item);
-            $item = $color . $item . "\e[0m";
-        }
-        push @$out, $item;
+        push @$out, _color_item($item, \%args);
     }
 
     [200, "OK"];
+}
+
+sub _color_begin {
+    my $args = shift;
+
+    # abuse args to store state
+    my $color = $args->{color};
+    $color = Term::ANSIColor::color($color) unless $color =~ /\A\e/;
+    $args->{_color} = $color;
+}
+
+sub _color_item {
+    my ($item, $args) = @_;
+
+    {
+        last if !defined($item) || ref($item);
+        $item = $args->{_color} . $item . "\e[0m";
+    }
+    return $item;
 }
 
 1;

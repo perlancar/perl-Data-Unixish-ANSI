@@ -56,35 +56,53 @@ You can also supply raw ANSI code.
 _
         },
     },
-    tags => [qw/text ansi/],
+    tags => [qw/text ansi itemfunc/],
     "x.dux.default_format" => "text-simple",
 };
 sub highlight {
     my %args = @_;
     my ($in, $out) = ($args{in}, $args{out});
 
-    my $ci = $args{ci};
-    my $color = $args{color} // 'bold red';
-    $color = color($color) unless $color =~ /\A\e/;
+    return [400, "Please specify string or pattern"]
+        unless defined($args{pattern}) || defined($args{string});
 
-    my $re;
-    if (defined($args{string})) {
-        $re = $ci ? qr/\Q$args{string}\E/io : qr/\Q$args{string}\E/o;
-    } elsif (defined($args{pattern})) {
-        $re = $ci ? qr/$args{pattern}/io : qr/$args{pattern}/o;
-    } else {
-        return [400, "Please specify 'string' or 'pattern'"];
-    }
-
+    _highlight_begin(\%args);
     while (my ($index, $item) = each @$in) {
-        {
-            last if !defined($item) || ref($item);
-            $item = ta_highlight_all($item, $re, $color);
-        }
-        push @$out, $item;
+        push @$out, _highlight_item($item, \%args);
     }
 
     [200, "OK"];
+}
+
+sub _highlight_begin {
+    my $args = shift;
+
+    # abuse args to store state
+    my $color = $args->{color} // 'bold red';
+    $color = color($color) unless $color =~ /\A\e/;
+    $args->{_color} = $color;
+
+    my $re;
+    if (defined($args->{string})) {
+        $re = $args->{ci} ?
+            qr/\Q$args->{string}\E/io : qr/\Q$args->{string}\E/o;
+    } elsif (defined($args->{pattern})) {
+        $re = $args->{ci} ?
+            qr/$args->{pattern}/io : qr/$args->{pattern}/o;
+    } else {
+        die "Please specify 'string' or 'pattern'";
+    }
+    $args->{_re} = $re;
+}
+
+sub _highlight_item {
+    my ($item, $args) = @_;
+
+    {
+        last if !defined($item) || ref($item);
+        $item = ta_highlight_all($item, $args->{_re}, $args->{_color});
+    }
+    return $item;
 }
 
 1;
