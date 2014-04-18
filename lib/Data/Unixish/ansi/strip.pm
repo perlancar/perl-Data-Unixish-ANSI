@@ -44,8 +44,8 @@ sub strip {
 
 In Perl:
 
- use Data::Unixish::List qw(dux);
- $stripped = dux('ansi::strip', "\e[1mblah"); # "blah"
+ use Data::Unixish qw(lduxl);
+ $stripped = lduxl('ansi::strip', "\e[1mblah"); # "blah"
 
 In command line:
 
@@ -54,4 +54,3 @@ In command line:
  HELLO
 
 =cut
-

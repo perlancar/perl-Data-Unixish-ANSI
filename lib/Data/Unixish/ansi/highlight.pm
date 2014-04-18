@@ -94,8 +94,8 @@ sub highlight {
 
 In Perl:
 
- use Data::Unixish::List qw(dux);
- $hilited = dux(['ansi::highlight' => {string=>"er"}], "merah"); # "m\e[31m\e[1mer\e[0mah"
+ use Data::Unixish qw(lduxl);
+ $hilited = lduxl(['ansi::highlight' => {string=>"er"}], "merah"); # "m\e[31m\e[1mer\e[0mah"
 
 In command line:
 
@@ -103,4 +103,3 @@ In command line:
  merah
 
 =cut
-

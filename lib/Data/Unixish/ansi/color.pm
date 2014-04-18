@@ -60,8 +60,8 @@ sub color {
 
 In Perl:
 
- use Data::Unixish::List qw(dux);
- $colorized = dux(['ansi::color' => {color=>"red"}], "red"); # "\e[31mred\e[0m"
+ use Data::Unixish qw(lduxl);
+ $colorized = lduxl(['ansi::color' => {color=>"red"}], "red"); # "\e[31mred\e[0m"
 
 In command line:
 
@@ -69,4 +69,3 @@ In command line:
  HELLO
 
 =cut
-
