@@ -28,6 +28,7 @@ $SPEC{highlight} = {
 Either this or `pattern` is required.
 
 _
+            pos => 0,
         },
         pattern => {
             summary => 'Regex pattern to search',
