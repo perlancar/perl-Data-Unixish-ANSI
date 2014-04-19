@@ -4,7 +4,7 @@ use 5.010;
 use strict;
 use syntax 'each_on_array'; # to support perl < 5.12
 use warnings;
-#use Log::Any '$log';
+use Log::Any '$log';
 
 use Data::Unixish::Util qw(%common_args);
 use Term::ANSIColor qw();
@@ -39,6 +39,7 @@ sub color {
     my %args = @_;
     my ($in, $out) = ($args{in}, $args{out});
 
+    _color_begin(\%args);
     while (my ($index, $item) = each @$in) {
         push @$out, _color_item($item, \%args);
     }
@@ -61,6 +62,7 @@ sub _color_item {
     {
         last if !defined($item) || ref($item);
         $item = $args->{_color} . $item . "\e[0m";
+        #$log->tracef("item=%s, color=%s", $item, $args->{_color});
     }
     return $item;
 }
