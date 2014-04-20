@@ -20,7 +20,7 @@ $SPEC{strip} = {
         %common_args,
     },
     tags => [qw/text ansi itemfunc/],
-    "x.dux.default_format" => "text-simple",
+    "x.perinci.cmdline.default_format" => "text-simple",
 };
 sub strip {
     my %args = @_;

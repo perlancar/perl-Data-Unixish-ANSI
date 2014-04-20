@@ -34,7 +34,7 @@ _
         },
     },
     tags => [qw/text ansi itemfunc/],
-    "x.dux.default_format" => "text-simple",
+    "x.perinci.cmdline.default_format" => "text-simple",
 };
 sub color {
     my %args = @_;
