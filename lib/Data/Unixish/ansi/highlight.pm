@@ -43,6 +43,7 @@ _
         ci => {
             summary => 'Whether to search case-insensitively',
             schema  => ['bool', default=>0],
+            cmdline_aliases => { i=>{} },
         },
         color => {
             summary => 'The color to use for each item',
@@ -55,6 +56,7 @@ Perl module Term::ANSIColor for more details.
 You can also supply raw ANSI code.
 
 _
+            cmdline_aliases => { c=>{} },
         },
     },
     tags => [qw/text ansi itemfunc/],

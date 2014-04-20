@@ -31,6 +31,7 @@ You can also supply raw ANSI code.
 _
             req => 1,
             pos => 0,
+            cmdline_aliases => { c=>{} },
         },
     },
     tags => [qw/text ansi itemfunc/],
