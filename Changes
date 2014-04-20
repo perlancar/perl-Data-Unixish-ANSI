@@ -1,5 +1,16 @@
 Revision history for Data-Unixish-ansi
 
+0.04    2014-04-20 (SHARYANTO)
+
+        - Adjust to App::dux 1.30+ (no longer uses x.dux.default_format but
+          x.perinci.cmdline.default_format).
+
+        - Fix a bug in ansi::color.
+
+        - Tweak Rinci metadata to make cmdline more convenient (set positional
+          argument, short options -i & -c).
+
+
 0.03    2014-04-20 (SHARYANTO)
 
         - Adjust to Data::Unixish 1.43, tag functions as itemfunc.
