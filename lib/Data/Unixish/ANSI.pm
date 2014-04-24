@@ -1,4 +1,4 @@
-package Data::Unixish::ansi;
+package Data::Unixish::ANSI;
 
 use 5.010001;
 use strict;
@@ -25,4 +25,3 @@ L<Text::ANSI::Util>
 L<Term::ANSIColor>
 
 L<Term::ANSIScreen>
-
