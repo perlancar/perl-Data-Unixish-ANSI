@@ -1,4 +1,4 @@
-package Data::Unixish::ansi::highlight;
+package Data::Unixish::ANSI::highlight;
 
 use 5.010;
 use strict;
@@ -116,11 +116,11 @@ sub _highlight_item {
 In Perl:
 
  use Data::Unixish qw(lduxl);
- $hilited = lduxl(['ansi::highlight' => {string=>"er"}], "merah"); # "m\e[31m\e[1mer\e[0mah"
+ $hilited = lduxl(['ANSI::highlight' => {string=>"er"}], "merah"); # "m\e[31m\e[1mer\e[0mah"
 
 In command line:
 
- % echo -e "merah" | dux ansi::highlight -s er; # 'er' will be highlighted
+ % echo -e "merah" | dux ANSI::highlight -s er; # 'er' will be highlighted
  merah
 
 =cut

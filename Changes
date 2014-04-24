@@ -1,4 +1,12 @@
-Revision history for Data-Unixish-ansi
+Revision history for Data-Unixish-ANSI
+
+0.05    2014-04-24 (SHARYANTO)
+
+        - No functional changes.
+
+        - Rename module: Data::Unixish::{ansi,ANSI} to avoid ambiguity of
+          Data::Unixish::ansi (it's not a dux function but a subpackage).
+
 
 0.04    2014-04-20 (SHARYANTO)
 

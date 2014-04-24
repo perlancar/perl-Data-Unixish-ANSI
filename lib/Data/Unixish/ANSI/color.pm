@@ -1,4 +1,4 @@
-package Data::Unixish::ansi::color;
+package Data::Unixish::ANSI::color;
 
 use 5.010;
 use strict;
@@ -77,11 +77,11 @@ sub _color_item {
 In Perl:
 
  use Data::Unixish qw(lduxl);
- $colorized = lduxl(['ansi::color' => {color=>"red"}], "red"); # "\e[31mred\e[0m"
+ $colorized = lduxl(['ANSI::color' => {color=>"red"}], "red"); # "\e[31mred\e[0m"
 
 In command line:
 
- % echo -e "HELLO" | dux ansi::color --color red; # text will appear in red
+ % echo -e "HELLO" | dux ANSI::color --color red; # text will appear in red
  HELLO
 
 =cut

@@ -1,4 +1,4 @@
-package Data::Unixish::ansi::strip;
+package Data::Unixish::ANSI::strip;
 
 use 5.010;
 use strict;
@@ -50,12 +50,12 @@ sub _strip_item {
 In Perl:
 
  use Data::Unixish qw(lduxl);
- $stripped = lduxl('ansi::strip', "\e[1mblah"); # "blah"
+ $stripped = lduxl('ANSI::strip', "\e[1mblah"); # "blah"
 
 In command line:
 
  % echo -e "\e[1mHELLO";                   # text will appear in bold
- % echo -e "\e[1mHELLO" | dux ansi::strip; # text will appear normal
+ % echo -e "\e[1mHELLO" | dux ANSI::strip; # text will appear normal
  HELLO
 
 =cut
