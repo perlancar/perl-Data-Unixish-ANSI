@@ -1,5 +1,8 @@
 package Data::Unixish::ANSI::highlight;
 
+# DATE
+# VERSION
+
 use 5.010;
 use strict;
 use syntax 'each_on_array'; # to support perl < 5.12
@@ -9,8 +12,6 @@ use warnings;
 use Data::Unixish::Util qw(%common_args);
 use Term::ANSIColor;
 use Text::ANSI::Util qw(ta_highlight_all);
-
-# VERSION
 
 our %SPEC;
 
@@ -60,7 +61,6 @@ _
         },
     },
     tags => [qw/text ansi itemfunc/],
-    "x.perinci.cmdline.default_format" => "text-simple",
 };
 sub highlight {
     my %args = @_;
