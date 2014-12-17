@@ -109,7 +109,7 @@ sub _highlight_item {
 }
 
 1;
-# ABSTRACT: Highlight string/pattern with color
+# ABSTRACT:
 
 =head1 SYNOPSIS
 

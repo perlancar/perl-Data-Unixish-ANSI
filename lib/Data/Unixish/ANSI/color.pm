@@ -1,5 +1,8 @@
 package Data::Unixish::ANSI::color;
 
+# DATE
+# VERSION
+
 use 5.010;
 use strict;
 use syntax 'each_on_array'; # to support perl < 5.12
@@ -8,8 +11,6 @@ use Log::Any '$log';
 
 use Data::Unixish::Util qw(%common_args);
 use Term::ANSIColor qw();
-
-# VERSION
 
 our %SPEC;
 
@@ -69,7 +70,7 @@ sub _color_item {
 }
 
 1;
-# ABSTRACT: Colorize text with ANSI color codes
+# ABSTRACT: 
 
 =head1 SYNOPSIS
 
