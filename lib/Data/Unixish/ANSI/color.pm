@@ -7,7 +7,7 @@ use 5.010;
 use strict;
 use syntax 'each_on_array'; # to support perl < 5.12
 use warnings;
-use Log::Any '$log';
+use Log::Any::IfLOG '$log';
 
 use Data::Unixish::Util qw(%common_args);
 use Term::ANSIColor qw();
@@ -70,7 +70,7 @@ sub _color_item {
 }
 
 1;
-# ABSTRACT: 
+# ABSTRACT:
 
 =head1 SYNOPSIS
 

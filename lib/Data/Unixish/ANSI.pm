@@ -1,10 +1,11 @@
 package Data::Unixish::ANSI;
 
+# DATE
+# VERSION
+
 use 5.010001;
 use strict;
 use warnings;
-
-# VERSION
 
 1;
 # ABSTRACT: dux functions related to text containing ANSI codes
