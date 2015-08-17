@@ -1,5 +1,12 @@
 Revision history for Data-Unixish-ANSI
 
+0.06    2015-08-17 (PERLANCAR)
+
+	- No functional changes.
+
+	- Switch from Log::Any to Log::Any::IfLOG.
+
+
 0.05    2014-04-24 (SHARYANTO)
 
         - No functional changes.
