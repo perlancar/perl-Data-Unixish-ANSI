@@ -1,11 +1,11 @@
-0.08    2017-07-10 (PERLANCAR)
+0.08    2017-07-10  Released-By: PERLANCAR
 
 	- No functional changes.
 
 	- Replace Log::Any with Log::ger.
 
 
-0.07    2015-09-03 (PERLANCAR)
+0.07    2015-09-03  Released-By: PERLANCAR
 
 	- No functional changes.
 
@@ -14,14 +14,14 @@
 	  requirement.
 
 
-0.06    2015-08-17 (PERLANCAR)
+0.06    2015-08-17  Released-By: PERLANCAR
 
 	- No functional changes.
 
 	- Switch from Log::Any to Log::Any::IfLOG.
 
 
-0.05    2014-04-24 (SHARYANTO)
+0.05    2014-04-24  Released-By: SHARYANTO
 
         - No functional changes.
 
@@ -29,7 +29,7 @@
           Data::Unixish::ansi (it's not a dux function but a subpackage).
 
 
-0.04    2014-04-20 (SHARYANTO)
+0.04    2014-04-20  Released-By: SHARYANTO
 
         - Adjust to App::dux 1.30+ (no longer uses x.dux.default_format but
           x.perinci.cmdline.default_format).
@@ -40,16 +40,16 @@
           argument, short options -i & -c).
 
 
-0.03    2014-04-20 (SHARYANTO)
+0.03    2014-04-20  Released-By: SHARYANTO
 
         - Adjust to Data::Unixish 1.43, tag functions as itemfunc.
 
 
-0.02    2013-04-20 (SHARYANTO)
+0.02    2013-04-20  Released-By: SHARYANTO
 
         - Add func: ansi::highlight.
 
 
-0.01    2013-04-12 (SHARYANTO)
+0.01    2013-04-12  Released-By: SHARYANTO
 
         - First version.
